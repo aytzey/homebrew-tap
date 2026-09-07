@@ -1,0 +1,37 @@
+name: test-showagent
+
+on:
+  pull_request:
+    paths:
+      - Formula/showagent.rb
+      - .github/workflows/test-showagent.yml
+  push:
+    branches: [main]
+    paths:
+      - Formula/showagent.rb
+      - .github/workflows/test-showagent.yml
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    env:
+      HOMEBREW_NO_ANALYTICS: '1'
+      SHOWAGENT_NO_UPDATE_CHECK: '1'
+    steps:
+      - name: Set up Homebrew and this tap
+        uses: Homebrew/actions/setup-homebrew@f8d4222eb633e65c2a0157383cf80861fc7fae7f
+        with:
+          stable: true
+      - name: Install and test the published binary
+        run: |
+          brew install aytzey/tap/showagent
+          brew test aytzey/tap/showagent
+          showagent --version
+          showagent --help
