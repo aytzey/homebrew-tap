@@ -4,26 +4,26 @@
 class Showagent < Formula
   desc "Browse, resume, branch, and convert local AI coding sessions in one TUI"
   homepage "https://github.com/aytzey/showagent"
-  version "0.11.3"
+  version "0.14.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aytzey/showagent/releases/download/v0.11.3/showagent_v0.11.3_darwin_arm64.tar.gz"
-      sha256 "afbf6df842204bd2452f29fef5cb561943fea6acbca41c32990a7268f5982723"
+      url "https://github.com/aytzey/showagent/releases/download/v0.14.0/showagent_v0.14.0_darwin_arm64.tar.gz"
+      sha256 "061c12527141e522d6b3d192123762123431df977608b33bc7d716a52a14bedb"
     else
-      url "https://github.com/aytzey/showagent/releases/download/v0.11.3/showagent_v0.11.3_darwin_amd64.tar.gz"
-      sha256 "4890e090ae3872ff44f3ac4df485307a1a2eb8f3fb087b798f789822fa2cac69"
+      url "https://github.com/aytzey/showagent/releases/download/v0.14.0/showagent_v0.14.0_darwin_amd64.tar.gz"
+      sha256 "64a2c151259be449e8cbb101d7dc118e7fcc19a9ffee4c7a214af4846f952a37"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/aytzey/showagent/releases/download/v0.11.3/showagent_v0.11.3_linux_arm64.tar.gz"
-      sha256 "5689e3eb38d1f63a41a5560ead81e90aea10791f3754b835c23bcdc3ed10d642"
+      url "https://github.com/aytzey/showagent/releases/download/v0.14.0/showagent_v0.14.0_linux_arm64.tar.gz"
+      sha256 "865714ef5ba502cbefc600bb0a0f9b22bfb957394b133d8ce602379b9ae8f1d7"
     else
-      url "https://github.com/aytzey/showagent/releases/download/v0.11.3/showagent_v0.11.3_linux_amd64.tar.gz"
-      sha256 "108297b9cecbbd34038f07a70487bb463568dc188e9f536ecfd813d3ebd2a05d"
+      url "https://github.com/aytzey/showagent/releases/download/v0.14.0/showagent_v0.14.0_linux_amd64.tar.gz"
+      sha256 "ce2ed5fe7afa9362e12ee2425c2905ecf7a08421495d791772b0b24dff0ef02b"
     end
   end
 
